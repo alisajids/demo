@@ -24,9 +24,9 @@ public class StreamOperation {
 		System.out.println("SECOND MAX::"+secondmax);
 		
 		//Find Third max No from List
-		int thirmax =  list.stream().sorted(Comparator.reverseOrder()).limit(3).skip(2).findFirst().orElse(0);
+		int thirdmax =  list.stream().sorted(Comparator.reverseOrder()).limit(3).skip(2).findFirst().orElse(0);
 	
-		System.out.println("Third MAX::"+thirmax);
+		System.out.println("Third MAX::"+thidrmax);
 		
 		//----------------------------------------------------------------------------------
 		
