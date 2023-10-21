@@ -42,6 +42,7 @@ public class StreamOperation {
 			 System.out.println("NAME:"+ e.getName()+"  MAX SALARY:: "+e.getSalary());
 
 		// find Employee with SECOND Max salary from Employee List
+		//SQL :: select max(salary) from employee WHERE salary < (select max(salary) from employee);
 			Double maxSal = listEmp.stream().mapToDouble(Employee::getSalary).max().orElse(0);
 			
 			Double secondMax = listEmp.stream().mapToDouble(Employee::getSalary)
@@ -51,6 +52,8 @@ public class StreamOperation {
 			Optional<Employee> emp = listEmp.stream().filter(employee-> employee.getSalary() == secondMax).findFirst();
 			
 			 System.out.println("NAME:"+ emp.get().getName()+"  MAX SALARY:: "+emp.get().getSalary());
+
+		//SQL:: select DISTINCT salary from employee order by salary DESC limit(1) OFFSET 2;
 			
 	}
  		
