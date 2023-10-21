@@ -41,6 +41,7 @@ public class StreamOperation {
 			
 			 System.out.println("NAME:"+ e.getName()+"  MAX SALARY:: "+e.getSalary());
 
+		// find Employee with SECOND Max salary from Employee List
 			Double maxSal = listEmp.stream().mapToDouble(Employee::getSalary).max().orElse(0);
 			
 			Double secondMax = listEmp.stream().mapToDouble(Employee::getSalary)
