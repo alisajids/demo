@@ -1,0 +1,18 @@
+package demo;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class SerialAndParallelStream {
+
+	public static void main(String args[]) {
+		List<Integer> myList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+		// Serial stream
+		myList.stream().forEach(System.out::println);
+
+		System.out.println("-------------Parallel--------");
+		// Parallel stream
+		myList.parallelStream().forEach(System.out::println);
+	}
+}
